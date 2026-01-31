@@ -1,0 +1,1 @@
+pub fn sum_of_multiples(limit: u32, factors: &[u32]) -> u32 {    let rng: Vec<u32> = (1..limit).collect();    rng.iter()        .filter(|&x| is_multiple_of(x, factors))        .sum()}fn is_multiple_of(x: &u32, factors: &[u32]) -> bool {    factors.iter().any(|factor| x % factor == 0)}
